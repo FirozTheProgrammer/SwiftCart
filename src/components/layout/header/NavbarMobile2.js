@@ -7,92 +7,15 @@ const NavbarMobile2 = () => {
   const { isOnepage, home } = useHeaderContex();
   const mobileItems1 = [
     {
-      name: "Business Consulting",
+      name: "Home",
       path: "/",
     },
-    {
-      name: "Marketing Consulting",
-      path: "/home-2",
-    },
-    {
-      name: "Corporate Business",
-      path: "/home-3",
-    },
-    {
-      name: "Digital Agency",
-      path: "/home-4",
-    },
-    {
-      name: "Finance Consulting",
-      path: "/home-5",
-    },
-    {
-      name: "Insurance",
-      path: "/home-6",
-    },
-    {
-      name: "Human Resource",
-      path: "/home-7",
-    },
 
-    {
-      name: "Creative Agency",
-      path: "/home-8",
-    },
-    {
-      name: "eCommerce",
-      path: "/home-9",
-    },
-    {
-      name: "Personal Portfolio",
-      path: "/home-10",
-    },
-    {
-      name: "SEO Agency",
-      path: "/home-11",
-    },
-    {
-      name: "Creative Portfolio",
-      path: "/home-12",
-    },
-    {
-      name: "Event Conference",
-      path: "/home-13",
-    },
-    {
-      name: "Sass App",
-      path: "/home-14",
-    },
-    {
-      name: "Freelancer",
-      path: "/home-15",
-    },
-
-    {
-      name: "Technology",
-      path: "/home-16",
-    },
-    {
-      name: "Web Agency",
-      path: "/home-17",
-    },
-    {
-      name: "Travel Agency",
-      path: "/home-18",
-    },
-    {
-      name: "International Consulting",
-      path: "/home-19",
-    },
-    {
-      name: "Startup",
-      path: "/home-20",
-    },
   ];
   const mobileItems2 = [
     {
-      name: "HOME",
-      path: "#",
+      name: "Home",
+      path: "/",
     },
     {
       name: "ABOUT",

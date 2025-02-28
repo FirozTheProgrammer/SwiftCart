@@ -7,91 +7,10 @@ const NavbarMobile = () => {
     useHeaderContex();
   const mobileItems = [
     {
-      name: isOnepage ? "HOME" : "Home",
-      toggler: true,
-      path: isOnepage ? "#" : "/",
-      dropdown: isOnepage ? false : true,
-      nestedDropdown: isOnepage ? false : true,
-  
+      name: "HOME",
+      path: "/",
     },
-    {
-      name:
-        isOnepage && home === 19
-          ? "STRATEGY"
-          : isOnepage && (home === 12 || home === 18)
-          ? "PORTFOLIO"
-          : isOnepage && (!style || headerType === 3 || home === 14)
-          ? "SERVICE"
-          : isOnepage && isCollection && (style === 2 || style === 3)
-          ? "COLLECTION"
-          : isOnepage && (style === 2 || style === 3)
-          ? "ABOUT"
-          : "Pages",
-      toggler: true,
-      path:
-        isOnepage && home === 19
-          ? "#tb__strategy"
-          : isOnepage && (home === 12 || home === 18)
-          ? "#tb__portfolio"
-          : isOnepage && (!style || headerType === 3 || home === 14)
-          ? "#service__area"
-          : isOnepage && isCollection && (style === 2 || style === 3)
-          ? "#popular__products"
-          : isOnepage && (style === 2 || style === 3)
-          ? home === 13
-            ? "#tb_about"
-            : "#about__mission__area"
-          : "#",
-      dropdown: isOnepage ? false : true,
-
-      dropdownItems: [
-        {
-          name: "Blog",
-          path: "/blogs",
-        },
-        {
-          name: "Blog Details",
-          path: "/blogs/1",
-        },
-        {
-          name: "Projects",
-          path: "/projects",
-        },
-        {
-          name: "Projects Details",
-          path: "/projects/1",
-        },
-        {
-          name: "Service",
-          path: "/services",
-        },
-        {
-          name: "Service Details",
-          path: "/services/1",
-        },
-
-        {
-          name: "Team",
-          path: "/team",
-        },
-        {
-          name: "Team Details",
-          path: "/team/1",
-        },
-        {
-          name: "FAQ",
-          path: "/faq",
-        },
-        {
-          name: "Error 404",
-          path: "/error",
-        },
-        {
-          name: "Login",
-          path: "/login",
-        },
-      ],
-    },
+   
     {
       name:
         isOnepage && home === 13
@@ -113,7 +32,7 @@ const NavbarMobile = () => {
           ? "#service__area"
           : style === 3 && headerType === 3
           ? "#project__area"
-          : "/home-9",
+          : "/shop",
       dropdown: isOnepage ? false : true,
       dropdownItems: [
         {
@@ -124,18 +43,7 @@ const NavbarMobile = () => {
           name: "Product Details",
           path: "/products/1",
         },
-        {
-          name: "Shop 2 Column",
-          path: "/shop-2-column",
-        },
-        {
-          name: "Shop 3 Column",
-          path: "/shop-3-column",
-        },
-        {
-          name: "Shop 4 Column",
-          path: "/shop-4-column",
-        },
+
         {
           name: "Cart",
           path: "/cart",
@@ -192,7 +100,7 @@ const NavbarMobile = () => {
               ? "BLOGS"
               : isOnepage && style === 3
               ? "CONTACT"
-              : "BLOG ",
+              : "BLOGS",
           icon: false,
           path:
             isOnepage && (home === 12 || home === 19)
@@ -245,7 +153,7 @@ const NavbarMobile = () => {
           !item?.name ? "" : <ItemMobile key={idx} item={item} />
         )}
       </ul>
-      <div className="offcanvas__account--items">
+      {/* <div className="offcanvas__account--items">
         <Link
           className="offcanvas__account--items__btn d-flex align-items-center"
           href="/login"
@@ -278,7 +186,7 @@ const NavbarMobile = () => {
             Login / Register
           </span>
         </Link>
-      </div>
+      </div> */}
     </nav>
   );
 };

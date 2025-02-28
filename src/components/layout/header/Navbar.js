@@ -1,4 +1,3 @@
-
 import megaMenuImage1 from "@/assets/img/mega/mega_menu_1.png";
 
 import DropdownEcommerce from "./DropdownEcommerce";
@@ -11,7 +10,7 @@ const Navbar = () => {
   const navItemsRaw = [
     {
       name: "HOME",
-      path: "/home-9",
+      path: "/",
     },
     {
       name:
@@ -99,7 +98,7 @@ const Navbar = () => {
           ? "#project__area"
           : style === 3 && headerType === 3
           ? "#about__mission__area"
-          : "/home-9",
+          : "/shop",
       dropdown: null,
       dropdownItems: [
         {
@@ -107,9 +106,7 @@ const Navbar = () => {
           path: "/shop",
           label: "Online Store",
           icon: false,
-         
         },
-    
 
         {
           name: "Product Details",
@@ -192,19 +189,20 @@ const Navbar = () => {
     },
   ];
 
-  const navItems = navItemsRaw?.map((navItem, idx) =>
-    idx === 0
-      ? { ...navItem, dropdown: null } // Removed dropdown from Home
-      : idx === 3
-      ? {
-          ...navItem,
-          dropdown: isOnepage ? null : (
-            <DropdownEcommerce dropdownItems={navItem.dropdownItems} />
-          ),
-        }
-      : navItem
-  ).filter((_, idx) => idx !== 1); // Removed Pages
-
+  const navItems = navItemsRaw
+    ?.map((navItem, idx) =>
+      idx === 0
+        ? { ...navItem, dropdown: null } // Removed dropdown from Home
+        : idx === 3
+        ? {
+            ...navItem,
+            dropdown: isOnepage ? null : (
+              <DropdownEcommerce dropdownItems={navItem.dropdownItems} />
+            ),
+          }
+        : navItem
+    )
+    .filter((_, idx) => idx !== 1); // Removed Pages
 
   return (
     <div className="headerarea__component">
