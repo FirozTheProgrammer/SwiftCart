@@ -17,7 +17,7 @@ const About = () => {
             data-aos="fade-up"
             data-aos-duration="1500"
           >
-            <div className="about__img__wrapper position-relative" data-tilt>
+            <div className="about__img_365_wrapper position-relative" data-tilt>
               <Image className="about__img__1" src={aboutImage1} alt="" />
               <div className="about__number">
                 <div className="about__number__inner about__number__position">

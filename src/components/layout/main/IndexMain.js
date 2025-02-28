@@ -4,6 +4,8 @@ import Blogs from "@/components/sections/blogs/Blogs";
 import Brands from "@/components/sections/brands/Brands";
 import Contact1 from "@/components/sections/contacts/Contact1";
 import Hero1 from "@/components/sections/hero-banners/Hero1";
+import Hero9 from "@/components/sections/hero-banners/Hero9";
+import Offer3 from "@/components/sections/offers/Offer3";
 import Projects from "@/components/sections/projects/Projects";
 
 import OfferedServices from "@/components/sections/services/OfferedServices";
@@ -17,7 +19,8 @@ const IndexMain = () => {
   const { isOnepage } = useHeaderContex();
   return (
     <main>
-      <Hero1 />
+       <Hero9 />
+       <Offer3 />
       <OfferedServices />
       <Video />
       <About />
